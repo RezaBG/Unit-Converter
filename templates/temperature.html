@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Unit Converter - Temperature</title>
+  </head>
+  <body>
+    <h1>Temperature Converter</h1>
+    <form method="POST" action="/temperature">
+      <label>Value to convert:</label>
+      <input type="text" name="value" required /><br /><br />
+
+      <label>From unit:</label>
+      <select name="from">
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+        <option value="K">Kelvin</option></select
+      ><br /><br />
+
+      <label>To unit:</label>
+      <select name="to">
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+        <option value="K">Kelvin</option></select
+      ><br /><br />
+
+      <button type="submit">Convert</button>
+    </form>
+
+    {{if .Result}}
+    <h2>Result:</h2>
+    <p>{{.Result}}</p>
+    {{end}}
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Unit Converter - Weight</title>
+  </head>
+  <body>
+    <h1>Weight Converter</h1>
+    <form method="POST" action="/weight">
+      <label>Value to convert:</label>
+      <input type="text" name="value" required /><br /><br />
+
+      <label>From unit:</label>
+      <select name="from">
+        <option value="mg">mg</option>
+        <option value="g">g</option>
+        <option value="kg">kg</option>
+        <option value="ounce">ounce</option>
+        <option value="pound">pound</option></select
+      ><br /><br />
+
+      <label>To unit:</label>
+      <select name="to">
+        <option value="mg">mg</option>
+        <option value="g">g</option>
+        <option value="kg">kg</option>
+        <option value="ounce">ounce</option>
+        <option value="pound">pound</option></select
+      ><br /><br />
+
+      <button type="submit">Convert</button>
+    </form>
+
+    {{if .Result}}
+    <h2>Result:</h2>
+    <p>{{.Result}}</p>
+    {{end}}
+  </body>
+</html>
