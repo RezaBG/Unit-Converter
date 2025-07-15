@@ -2,30 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unit Converter - Length</title>
   </head>
   <body>
     <h1>Length Converter</h1>
     <form method="POST" action="/">
-      <label for="value">Enter value:</label>
-      <input type="text" name="value" required /> <br /><br />
+      <label>Value to convert:</label>
+      <input type="text" name="value" required /><br /><br />
 
-      <label for="">From unit:</label>
-      <select name="from" id="">
+      <label>From unit:</label>
+      <select name="from">
         <option value="cm">cm</option>
         <option value="m">m</option>
         <option value="km">km</option>
+        <option value="inch">inch</option>
         <option value="ft">ft</option>
         <option value="yard">yard</option>
         <option value="mile">mile</option></select
       ><br /><br />
 
       <label>To unit:</label>
-      <select name="to" id="">
+      <select name="to">
         <option value="cm">cm</option>
         <option value="m">m</option>
         <option value="km">km</option>
+        <option value="inch">inch</option>
         <option value="ft">ft</option>
         <option value="yard">yard</option>
         <option value="mile">mile</option></select
@@ -35,7 +36,7 @@
     </form>
 
     {{if .Result}}
-    <h2>Conversion Result</h2>
+    <h2>Result:</h2>
     <p>{{.Result}}</p>
     {{end}}
   </body>
